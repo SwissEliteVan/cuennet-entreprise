@@ -17,7 +17,7 @@ const distanceEl = document.getElementById("distance");
 const calculateBtn = document.getElementById("calculateBtn");
 const resultEl = document.getElementById("result");
 
-if (calculateBtn) {
+if (calculateBtn && sizeEl && distanceEl && resultEl) {
   calculateBtn.addEventListener("click", () => {
     const size = sizeEl.value;
     const distance = distanceEl.value;
@@ -36,4 +36,51 @@ if (calculateBtn) {
 
     resultEl.textContent = `Prix estimé : ${totalMin} CHF - ${totalMax} CHF`;
   });
+}
+
+const devisForm = document.getElementById("devisForm");
+const formSteps = document.querySelectorAll(".form-step");
+const stepDots = document.querySelectorAll(".step-dot");
+const prevStepBtn = document.getElementById("prevStep");
+const nextStepBtn = document.getElementById("nextStep");
+
+if (devisForm && formSteps.length && prevStepBtn && nextStepBtn) {
+  let currentStep = 1;
+
+  const updateStepUI = () => {
+    formSteps.forEach((step) => {
+      step.classList.toggle("active", Number(step.dataset.step) === currentStep);
+    });
+
+    stepDots.forEach((dot) => {
+      dot.classList.toggle("active", Number(dot.dataset.step) === currentStep);
+    });
+
+    prevStepBtn.disabled = currentStep === 1;
+    nextStepBtn.classList.toggle("d-none", currentStep === formSteps.length);
+  };
+
+  nextStepBtn.addEventListener("click", () => {
+    if (currentStep < formSteps.length) {
+      currentStep += 1;
+      updateStepUI();
+    }
+  });
+
+  prevStepBtn.addEventListener("click", () => {
+    if (currentStep > 1) {
+      currentStep -= 1;
+      updateStepUI();
+    }
+  });
+
+  devisForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Merci ! Votre demande a bien été envoyée.");
+    devisForm.reset();
+    currentStep = 1;
+    updateStepUI();
+  });
+
+  updateStepUI();
 }
