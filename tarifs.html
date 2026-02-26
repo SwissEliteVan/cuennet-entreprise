@@ -3,56 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quel est le prix d'un déménagement en Suisse ?</title>
+  <title>Tarifs et Devis | Cuennet Entreprise</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="py-5">
     <div class="container">
-      <h1 class="mb-4">Quel est le prix d'un déménagement en Suisse ?</h1>
+      <h1 class="mb-4">Tarifs et Devis</h1>
+      <p class="text-muted mb-5">Simulateur indicatif basé sur les fourchettes de prix d'un déménagement local en Suisse.</p>
 
       <section class="mb-5">
-        <h2 class="h4 mb-3">Tableau comparatif par ville</h2>
+        <h2 class="h4 mb-3">Fourchettes pour un déménagement local</h2>
         <div class="table-responsive">
           <table class="table table-striped table-hover align-middle">
             <thead class="table-primary">
               <tr>
-                <th>Villes</th>
-                <th>Tarif observé</th>
-                <th>Contexte</th>
+                <th>Typologie de logement</th>
+                <th>Volume indicatif</th>
+                <th>Prix estimé</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Genève / Zurich</td>
-                <td>2 000 CHF à 6 000 CHF</td>
-                <td>Demande forte, accès parfois difficiles.</td>
+                <td>Studio / 1 à 2 pièces</td>
+                <td>10–20 m³</td>
+                <td>550 à 1 000 CHF</td>
               </tr>
               <tr>
-                <td>Lausanne / Berne</td>
-                <td>1 500 CHF à 5 000 CHF</td>
-                <td>Prix intermédiaires selon volume et étage.</td>
+                <td>2 à 3 pièces</td>
+                <td>20–30 m³</td>
+                <td>800 à 1 300 CHF</td>
               </tr>
               <tr>
-                <td>Fribourg / Neuchâtel</td>
-                <td>1 200 CHF à 4 000 CHF</td>
-                <td>Tarifs souvent plus accessibles selon saison.</td>
+                <td>3 à 4 pièces</td>
+                <td>30–40 m³</td>
+                <td>1 100 à 1 450 CHF</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section>
-        <h2 class="h4 mb-3">Astuces pour déménager pas cher</h2>
-        <ul class="list-group list-group-flush tips-list">
-          <li class="list-group-item"><span class="tip-check">✅</span>Déménager en basse saison ou en semaine.</li>
-          <li class="list-group-item"><span class="tip-check">✅</span>Opter pour le "groupage" (partage du camion avec d'autres clients).</li>
-          <li class="list-group-item"><span class="tip-check">✅</span>Récupérer des cartons gratuits ou moins chers chez IKEA, Migros ou sur des groupes Facebook locaux.</li>
-        </ul>
+      <section class="pricing-highlight mb-5">
+        <h2 class="h4 mb-3">Simulateur de prix</h2>
+        <form id="pricingSimulator" class="row g-3">
+          <div class="col-md-6">
+            <label for="housingType" class="form-label">Choisissez votre logement</label>
+            <select id="housingType" class="form-select" required>
+              <option value="">Sélectionnez...</option>
+              <option value="550-1000">Studio / 1 à 2 pièces (10–20 m³)</option>
+              <option value="800-1300">2 à 3 pièces (20–30 m³)</option>
+              <option value="1100-1450">3 à 4 pièces (30–40 m³)</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <h3 class="h6">Options supplémentaires</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="lift" data-min="500" data-max="500">
+              <label class="form-check-label" for="lift">Location d'un monte-meuble : 500 CHF par demi-journée</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="furniture" data-min="100" data-max="400">
+              <label class="form-check-label" for="furniture">Démontage et remontage du mobilier : 100 à 400 CHF</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="heavy" data-min="300" data-max="1000">
+              <label class="form-check-label" for="heavy">Transport d'objets lourds (piano, coffre-fort) : 300 à 1 000 CHF</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Calculer l'estimation</button>
+          </div>
+        </form>
+        <p class="mt-3 mb-0 fw-semibold" id="estimateResult">Sélectionnez vos critères pour voir une estimation.</p>
+      </section>
+
+      <section class="alert-red">
+        <h2 class="h5">Avertissement important</h2>
+        <p class="mb-0">Pour obtenir un prix forfaitaire fixe et éviter les mauvaises surprises, une visite technique sur place à domicile est nécessaire avant validation du devis final.</p>
       </section>
     </div>
   </main>
+
+  <script>
+    const pricingSimulator = document.getElementById('pricingSimulator');
+    const estimateResult = document.getElementById('estimateResult');
+
+    pricingSimulator.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const housingValue = document.getElementById('housingType').value;
+
+      if (!housingValue) {
+        estimateResult.textContent = 'Veuillez sélectionner un type de logement.';
+        return;
+      }
+
+      let [minPrice, maxPrice] = housingValue.split('-').map(Number);
+      const options = pricingSimulator.querySelectorAll('input[type="checkbox"]:checked');
+
+      options.forEach((option) => {
+        minPrice += Number(option.dataset.min);
+        maxPrice += Number(option.dataset.max);
+      });
+
+      estimateResult.textContent = `Estimation indicative : ${minPrice.toLocaleString('fr-CH')} CHF à ${maxPrice.toLocaleString('fr-CH')} CHF.`;
+    });
+  </script>
 </body>
 </html>
