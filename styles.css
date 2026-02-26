@@ -1,43 +1,83 @@
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   background-color: #f8fafc;
+  color: #0f172a;
 }
 
-.cta-banner {
-  background: linear-gradient(90deg, #0d6efd, #4f46e5);
+.hero-home {
+  background: linear-gradient(120deg, #0d6efd, #4f46e5);
 }
 
-.footer {
-  background-color: #0f172a;
+.service-card {
+  border: 0;
 }
 
-.footer-link {
-  color: #cbd5e1;
-  text-decoration: none;
+.reassurance-band {
+  background-color: #e2e8f0;
 }
 
-.footer-link:hover {
-  color: #ffffff;
-}
-
-.rating {
-  font-size: 1.4rem;
-  color: #0d6efd;
-  font-weight: 700;
-}
-
-.hero-clean {
-  background: linear-gradient(120deg, #0ea5e9, #0284c7);
-}
-
-.article-container {
-  max-width: 800px;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 0.75rem;
+.reassurance-item {
+  background-color: #ffffff;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
 }
 
-.finance-box {
-  border-left: 6px solid #f59e0b;
+.icon {
+  font-size: 1.5rem;
+}
+
+.tips-list .list-group-item {
+  background: transparent;
+  font-size: 1.05rem;
+}
+
+.tip-check {
+  color: #16a34a;
+  margin-right: 0.5rem;
+}
+
+.international-article {
+  max-width: 850px;
+}
+
+.important-box {
+  background-color: #fef9c3;
+}
+
+.profile-card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.score {
+  font-size: 2rem;
+  color: #0d6efd;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.eco-list li {
+  margin-bottom: 0.5rem;
+}
+
+.guide-article {
+  max-width: 840px;
+  line-height: 1.8;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.tip-box {
+  border-left: 6px solid #3b82f6;
+  background: #eff6ff;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.warning-box {
+  border: 2px solid #ef4444;
+  background: #fee2e2;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
 }
