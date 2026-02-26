@@ -1,0 +1,43 @@
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f8fafc;
+}
+
+.cta-banner {
+  background: linear-gradient(90deg, #0d6efd, #4f46e5);
+}
+
+.footer {
+  background-color: #0f172a;
+}
+
+.footer-link {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.rating {
+  font-size: 1.4rem;
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.hero-clean {
+  background: linear-gradient(120deg, #0ea5e9, #0284c7);
+}
+
+.article-container {
+  max-width: 800px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.finance-box {
+  border-left: 6px solid #f59e0b;
+}
