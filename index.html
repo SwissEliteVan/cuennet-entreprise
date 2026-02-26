@@ -1,29 +1,35 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-CH">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cuennet Entreprise | Portail de déménagement en Suisse</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Déménagement Suisse | Devis Gratuit et Tarifs Transparents</title>
+  <meta name="description" content="Entreprise de déménagement en Suisse : tarifs clairs, nettoyage de fin de bail, services spécialisés et devis gratuit en 4 étapes." />
+  <meta name="keywords" content="déménagement suisse, devis déménagement, nettoyage fin de bail, monte-meuble, déménageur suisse" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.cuennet-entreprise.ch/" />
+  <meta property="og:title" content="Déménagez en Suisse l'esprit serein" />
+  <meta property="og:description" content="Le prix moyen d'un déménagement tout compris varie entre 800 CHF et 1 500 CHF. Demandez votre devis gratuit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_CH" />
+  <meta name="theme-color" content="#0d6efd" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
   <header>
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <nav id="mainNav" class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm" aria-label="Navigation principale">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Cuennet Entreprise</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <a class="navbar-brand fw-bold text-primary" href="#accueil">Cuennet Entreprise</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavContent" aria-controls="mainNavContent" aria-expanded="false" aria-label="Ouvrir le menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
+        <div class="collapse navbar-collapse" id="mainNavContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs et Devis</a></li>
-            <li class="nav-item"><a class="nav-link" href="international.html">International</a></li>
-            <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
-            <li class="nav-item"><a class="nav-link" href="entreprises.html">Comparatif</a></li>
-            <li class="nav-item"><a class="nav-link" href="devis.html">Devis</a></li>
-            <li class="nav-item"><a class="nav-link" href="profile.html">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services-tarifs">Services & Tarifs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog-conseils">Blog & Conseils</a></li>
+            <li class="nav-item"><a class="nav-link" href="#devis-gratuit">Devis Gratuit</a></li>
           </ul>
         </div>
       </div>
@@ -31,83 +37,282 @@
   </header>
 
   <main>
-    <section class="hero-home text-white py-5">
+    <section id="accueil" class="hero-home text-white py-5">
       <div class="container py-5">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-4">
           <div class="col-lg-8">
-            <h1 class="display-4 fw-bold mb-3">Déménagez sans stress partout en Suisse</h1>
-            <p class="lead mb-4">Le prix moyen d'un déménagement tout compris en Suisse varie généralement entre <strong>800 CHF et 1500 CHF</strong>. Notre équipe vous accompagne de l'estimation à l'installation.</p>
-            <a class="btn btn-light btn-lg fw-semibold" href="tarifs.html">Simuler mon tarif</a>
+            <p class="text-uppercase fw-semibold mb-2">Entreprise de déménagement en Suisse</p>
+            <h1 class="display-4 fw-bold mb-3">Déménagez en Suisse l'esprit serein.</h1>
+            <p class="lead mb-4">Le prix moyen d'un déménagement tout compris varie entre 800 CHF et 1 500 CHF. Profitez d'un service professionnel, sans frais cachés.</p>
+            <a class="btn btn-light btn-lg fw-semibold" href="#devis-gratuit">Obtenir mon devis gratuit</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-5 reassurance-band" id="reassurance">
+    <section class="py-5 reassurance-band" id="confiance">
       <div class="container">
-        <h2 class="mb-4 text-center">Pourquoi nous faire confiance ?</h2>
+        <h2 class="text-center mb-4">Réassurance & Confiance</h2>
         <div class="row g-3 text-center">
           <div class="col-md-4">
-            <div class="reassurance-item p-3 h-100 rounded-3">
-              <p class="icon mb-2">✅</p>
-              <p class="fw-semibold mb-0">Entreprise officiellement inscrite au registre du commerce suisse (Zefix).</p>
+            <div class="reassurance-item p-4 h-100 rounded-3">
+              <p class="icon mb-2">🏛️</p>
+              <p class="fw-semibold mb-0">Entreprise vérifiée au registre du commerce (Zefix).</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="reassurance-item p-3 h-100 rounded-3">
+            <div class="reassurance-item p-4 h-100 rounded-3">
               <p class="icon mb-2">🛡️</p>
-              <p class="fw-semibold mb-0">Assurance responsabilité civile professionnelle active pour chaque mission.</p>
+              <p class="fw-semibold mb-0">Assurances RC et Transport incluses (couverture à la valeur vénale).</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="reassurance-item p-3 h-100 rounded-3">
-              <p class="icon mb-2">🚚</p>
-              <p class="fw-semibold mb-0">Assurance transporteurs incluse pour sécuriser vos biens pendant tout le trajet.</p>
+            <div class="reassurance-item p-4 h-100 rounded-3">
+              <p class="icon mb-2">♻️</p>
+              <p class="fw-semibold mb-0">Démarche écologique : utilisation de caisses plastiques recyclables et matériel biodégradable.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-5" id="services">
+    <section class="py-5" id="services-tarifs">
       <div class="container">
-        <h2 class="mb-4">Nos Services</h2>
+        <h2 class="mb-4">Nos Services & Tarifs</h2>
         <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <article class="card h-100 shadow-sm service-card">
-              <div class="card-body">
-                <h3 class="h5">Déménagement local</h3>
-                <p class="mb-0 text-muted">Organisation complète pour vos changements d'adresse dans votre canton ou ville voisine.</p>
+          <div class="col-12">
+            <article class="service-detail h-100">
+              <h3 class="h4">Déménagement Local et Longue Distance</h3>
+              <div class="table-responsive">
+                <table class="table table-striped align-middle mb-3">
+                  <thead>
+                    <tr>
+                      <th>Type de logement</th>
+                      <th>Tarif local</th>
+                      <th>Longue distance</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Studio (10-20m³)</td>
+                      <td>550 - 1000 CHF</td>
+                      <td>1700 - 2000 CHF</td>
+                    </tr>
+                    <tr>
+                      <td>3-4 pièces</td>
+                      <td>1100 - 1450 CHF</td>
+                      <td>Sur devis</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="customs-box">
+                Les déménagements transfrontaliers (ex: France-Suisse) coûtent entre <strong>2 000 et 8 000 CHF</strong>, gestion douanière incluse.
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <article class="card h-100 shadow-sm service-card">
-              <div class="card-body">
-                <h3 class="h5">Déménagement international</h3>
-                <p class="mb-0 text-muted">Accompagnement des formalités douanières et logistiques entre la Suisse et l'étranger.</p>
+
+          <div class="col-lg-7">
+            <article class="service-detail h-100">
+              <h3 class="h4">Nettoyage de fin de bail</h3>
+              <p class="pricing-highlight mb-3"><strong>Garantie de remise des clés</strong> : si la régie trouve à redire, les retouches sont gratuites.</p>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between"><span>2,5 pièces</span><strong>550-900 CHF</strong></li>
+                <li class="list-group-item d-flex justify-content-between"><span>4,5 pièces</span><strong>850-1 400 CHF</strong></li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-5">
+            <article class="service-detail h-100">
+              <h3 class="h4">Services Spécialisés</h3>
+              <div class="info-card mb-3">
+                <h4 class="h6">Location de monte-meuble</h4>
+                <p class="mb-0 fw-semibold">500 CHF / demi-journée</p>
+              </div>
+              <div class="info-card">
+                <h4 class="h6">Transport d'objets lourds (piano, coffre-fort)</h4>
+                <p class="mb-0 fw-semibold">300 à 1 000 CHF</p>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-3">
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light" id="blog-conseils">
+      <div class="container">
+        <h2 class="mb-4">Blog & Guides Pratiques</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
             <article class="card h-100 shadow-sm service-card">
               <div class="card-body">
-                <h3 class="h5">Nettoyage de fin de bail</h3>
-                <p class="mb-0 text-muted">Prestation professionnelle avec garantie de remise des clés validée à l'état des lieux.</p>
+                <h3 class="h5">Check-list des démarches administratives</h3>
+                <p class="text-muted">Assurance maladie, service des automobiles et formalités douanières : les délais clés à ne pas manquer.</p>
+                <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#article1" aria-expanded="false" aria-controls="article1">Lire le résumé</button>
+                <div id="article1" class="collapse mt-3">
+                  <p>Ajuster la prime d'assurance maladie avant le <strong>30 novembre</strong> et annoncer le changement d'adresse au service des automobiles sous <strong>14 jours</strong>. Pour la douane, un inventaire complet et le permis de circulation sont obligatoires.</p>
+                </div>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-4">
             <article class="card h-100 shadow-sm service-card">
               <div class="card-body">
-                <h3 class="h5">Garde-meubles</h3>
-                <p class="mb-0 text-muted">Solutions de stockage sécurisées pour entreposer vos biens quelques jours ou plusieurs mois.</p>
+                <h3 class="h5">Les aides financières au déménagement</h3>
+                <p class="text-muted">Panorama des soutiens pour les familles, demandeurs d'emploi et retraités AVS.</p>
+                <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#article2" aria-expanded="false" aria-controls="article2">Lire le résumé</button>
+                <div id="article2" class="collapse mt-3">
+                  <p>Prime <strong>LaFam (AHV/AI) de 1000 CHF</strong> pour un foyer de 3 enfants, aide de l'ORP pour les demandeurs d'emploi et accompagnement Prosenectute pour les retraités AVS.</p>
+                </div>
               </div>
             </article>
           </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm service-card">
+              <div class="card-body">
+                <h3 class="h5">Comment déménager pas cher ?</h3>
+                <p class="text-muted">Réduisez votre facture avec des stratégies simples et concrètes.</p>
+                <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#article3" aria-expanded="false" aria-controls="article3">Lire le résumé</button>
+                <div id="article3" class="collapse mt-3">
+                  <p>Déménager en basse saison, opter pour le <strong>groupage</strong>, et trouver des cartons abordables chez IKEA, Migros, ou d'occasion sur Ricardo.ch et Anibis.ch.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="devis-gratuit">
+      <div class="container">
+        <h2 class="mb-4">Formulaire de Devis Interactif</h2>
+        <div class="multi-step-wrapper">
+          <div class="step-indicator mb-4" aria-hidden="true">
+            <span class="step-dot active" data-step="1">1</span>
+            <span class="step-dot" data-step="2">2</span>
+            <span class="step-dot" data-step="3">3</span>
+            <span class="step-dot" data-step="4">4</span>
+          </div>
+
+          <form id="devisForm" novalidate>
+            <div class="form-step active" data-step="1">
+              <h3 class="h5 mb-3">Étape 1 : Trajet</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="postalDepart" class="form-label">Code postal de départ</label>
+                  <input id="postalDepart" name="postalDepart" type="text" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="postalArrivee" class="form-label">Code postal d'arrivée</label>
+                  <input id="postalArrivee" name="postalArrivee" type="text" class="form-control" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+              <h3 class="h5 mb-3">Étape 2 : Volume & Accès</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="volume" class="form-label">Volume</label>
+                  <select id="volume" name="volume" class="form-select" required>
+                    <option value="" selected disabled>Choisir...</option>
+                    <option>Studio</option>
+                    <option>2-3 pièces</option>
+                    <option>Maison</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="ascenseur" class="form-label">Ascenseur</label>
+                  <select id="ascenseur" name="ascenseur" class="form-select" required>
+                    <option value="" selected disabled>Choisir...</option>
+                    <option>Oui</option>
+                    <option>Non</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="reperage" class="form-label">Repérage (visite technique gratuite)</label>
+                  <select id="reperage" name="reperage" class="form-select" required>
+                    <option value="" selected disabled>Souhaitez-vous un repérage ?</option>
+                    <option>Oui</option>
+                    <option>Non</option>
+                  </select>
+                  <small class="text-muted">Indispensable pour les logements de plus de 3 pièces pour calculer le prix juste.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <h3 class="h5 mb-3">Étape 3 : Options</h3>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="Nettoyage fin de bail" id="optionNettoyage" name="options">
+                <label class="form-check-label" for="optionNettoyage">Nettoyage fin de bail</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="Démontage/Remontage" id="optionDemontage" name="options">
+                <label class="form-check-label" for="optionDemontage">Démontage/Remontage</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Monte-meuble" id="optionMonte" name="options">
+                <label class="form-check-label" for="optionMonte">Monte-meuble</label>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+              <h3 class="h5 mb-3">Étape 4 : Coordonnées</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nom" class="form-label">Nom</label>
+                  <input id="nom" name="nom" type="text" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telephone" class="form-label">Téléphone</label>
+                  <input id="telephone" name="telephone" type="tel" class="form-control" required>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input id="email" name="email" type="email" class="form-control" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4 gap-2 flex-wrap">
+              <button id="prevStep" type="button" class="btn btn-outline-secondary">Précédent</button>
+              <div class="text-end">
+                <button id="nextStep" type="button" class="btn btn-primary">Suivant</button>
+                <button id="submitStep" type="submit" class="btn btn-success d-none">Valider ma demande</button>
+                <p class="small text-muted mt-2 mb-0">Nous ne demandons jamais d'acompte en espèces à l'avance.</p>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <h2 class="h5">Cuennet Entreprise</h2>
+          <address class="mb-0">
+            Rue de Lausanne 120, 1020 Renens, Suisse<br>
+            Tél : <a class="text-white" href="tel:+41213224567">+41 21 322 45 67</a><br>
+            Email : <a class="text-white" href="mailto:contact@cuennet-entreprise.ch">contact@cuennet-entreprise.ch</a>
+          </address>
+        </div>
+        <div class="col-lg-6 d-lg-flex justify-content-lg-end align-items-lg-end">
+          <nav aria-label="Liens légaux" class="d-flex flex-wrap gap-3">
+            <a class="text-white" href="#">Mentions Légales</a>
+            <a class="text-white" href="#">Conditions Générales</a>
+            <a class="text-white" href="#">Politique de Confidentialité</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
