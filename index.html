@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuennet Entreprise | Portail de déménagement en Suisse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Cuennet Entreprise</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#devis">Devis</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="nettoyage.html">Nettoyage</a></li>
+            <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+            <li class="nav-item"><a class="nav-link" href="entreprises.html">Entreprises</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="cta-banner py-3 text-center text-white">
+      <div class="container fw-semibold">
+        Comparez Devis Déménagement / Trouvez le déménageur pour votre projet / Gratuit - Aucune Obligation
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="py-5 bg-light" id="devis">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="mb-3">Calculateur de devis déménagement</h1>
+            <p class="text-muted">Obtenez rapidement une estimation basée sur la taille de votre logement, la distance et les services complémentaires.</p>
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="size">Taille du logement</label>
+                    <select id="size" class="form-select">
+                      <option value="studio">Studio / 1-2 pièces (10–20 m³)</option>
+                      <option value="2-3">2-3 pièces (20–30 m³)</option>
+                      <option value="3-4">3-4 pièces (30–40 m³)</option>
+                      <option value="maison">Maison (40–60 m³ et +)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="distance">Distance</label>
+                    <select id="distance" class="form-select">
+                      <option value="local">Local</option>
+                      <option value="longue">Longue distance 200km</option>
+                    </select>
+                  </div>
+                </div>
+
+                <hr>
+
+                <h2 class="h5">Options supplémentaires</h2>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="emballage" id="emballage">
+                  <label class="form-check-label" for="emballage">Matériel d'emballage (+100 à 250 CHF)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="demontage" id="demontage">
+                  <label class="form-check-label" for="demontage">Démontage et remontage (+200 à 450 CHF)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="monte" id="monte">
+                  <label class="form-check-label" for="monte">Location de monte-meuble (+500 CHF / demi-journée)</label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="nettoyage" id="nettoyage">
+                  <label class="form-check-label" for="nettoyage">Nettoyage (+200 à 400 CHF)</label>
+                </div>
+
+                <button class="btn btn-primary" id="calculateBtn">Calculer</button>
+                <p class="alert alert-info mt-3 mb-0" id="result">Prix estimé : 550 CHF - 1000 CHF</p>
+                <small class="text-muted d-block mt-2">Le prix final dépendra d'une visite sur place et des conditions d'accès.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="services">
+      <div class="container">
+        <h2>Services principaux</h2>
+        <p>Découvrez nos services de déménagement, nettoyage, et conseils pratiques pour réussir votre projet partout en Suisse.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer py-5 text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3 class="h5">À propos</h3>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">À propos de nous</a></li>
+            <li><a href="#" class="footer-link">Ce que nous faisons</a></li>
+            <li><a href="#" class="footer-link">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h5">Pour les sociétés</h3>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Fonctionnement</a></li>
+            <li><a href="#" class="footer-link">Essai Gratuit</a></li>
+            <li><a href="#" class="footer-link">Se connecter</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h5">Besoin d'aide ?</h3>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Contact</a></li>
+            <li><a href="#" class="footer-link">E-mail</a></li>
+            <li><a href="#" class="footer-link">Confidentialité</a></li>
+            <li><a href="#" class="footer-link">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
