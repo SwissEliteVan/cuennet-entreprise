@@ -84,3 +84,21 @@ if (devisForm && formSteps.length && prevStepBtn && nextStepBtn) {
 
   updateStepUI();
 }
+
+const aidTriggers = document.querySelectorAll('.aid-trigger');
+
+if (aidTriggers.length) {
+  aidTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const panelId = trigger.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : null;
+      if (!panel) {
+        return;
+      }
+
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', String(!isExpanded));
+      panel.hidden = isExpanded;
+    });
+  });
+}
