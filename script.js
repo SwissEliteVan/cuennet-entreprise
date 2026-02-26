@@ -43,8 +43,9 @@ const formSteps = document.querySelectorAll(".form-step");
 const stepDots = document.querySelectorAll(".step-dot");
 const prevStepBtn = document.getElementById("prevStep");
 const nextStepBtn = document.getElementById("nextStep");
+const submitStepBtn = document.getElementById("submitStep");
 
-if (devisForm && formSteps.length && prevStepBtn && nextStepBtn) {
+if (devisForm && formSteps.length && prevStepBtn && nextStepBtn && submitStepBtn) {
   let currentStep = 1;
 
   const updateStepUI = () => {
@@ -57,10 +58,26 @@ if (devisForm && formSteps.length && prevStepBtn && nextStepBtn) {
     });
 
     prevStepBtn.disabled = currentStep === 1;
-    nextStepBtn.classList.toggle("d-none", currentStep === formSteps.length);
+    const isLastStep = currentStep === formSteps.length;
+    nextStepBtn.classList.toggle("d-none", isLastStep);
+    submitStepBtn.classList.toggle("d-none", !isLastStep);
+  };
+
+  const validateCurrentStep = () => {
+    const activeStep = devisForm.querySelector(`.form-step[data-step="${currentStep}"]`);
+    if (!activeStep) {
+      return true;
+    }
+
+    const requiredFields = activeStep.querySelectorAll("input[required], select[required], textarea[required]");
+    return [...requiredFields].every((field) => field.reportValidity());
   };
 
   nextStepBtn.addEventListener("click", () => {
+    if (!validateCurrentStep()) {
+      return;
+    }
+
     if (currentStep < formSteps.length) {
       currentStep += 1;
       updateStepUI();
@@ -76,6 +93,11 @@ if (devisForm && formSteps.length && prevStepBtn && nextStepBtn) {
 
   devisForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    if (!validateCurrentStep()) {
+      return;
+    }
+
     alert("Merci ! Votre demande a bien été envoyée.");
     devisForm.reset();
     currentStep = 1;
@@ -85,20 +107,34 @@ if (devisForm && formSteps.length && prevStepBtn && nextStepBtn) {
   updateStepUI();
 }
 
-const aidTriggers = document.querySelectorAll('.aid-trigger');
+const aidTriggers = document.querySelectorAll(".aid-trigger");
 
 if (aidTriggers.length) {
   aidTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => {
-      const panelId = trigger.getAttribute('aria-controls');
+    trigger.addEventListener("click", () => {
+      const panelId = trigger.getAttribute("aria-controls");
       const panel = panelId ? document.getElementById(panelId) : null;
       if (!panel) {
         return;
       }
 
-      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-      trigger.setAttribute('aria-expanded', String(!isExpanded));
+      const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+      trigger.setAttribute("aria-expanded", String(!isExpanded));
       panel.hidden = isExpanded;
+    });
+  });
+}
+
+const navLinks = document.querySelectorAll(".navbar .nav-link");
+const navbarCollapse = document.getElementById("mainNavContent");
+
+if (navLinks.length && navbarCollapse) {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show") && window.bootstrap?.Collapse) {
+        const bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+        bsCollapse.hide();
+      }
     });
   });
 }

@@ -204,3 +204,33 @@ body {
 .aid-panel {
   padding: 1rem 1.1rem;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.navbar .nav-link.active {
+  color: #0d6efd;
+}
+
+.hero-home {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+}
+
+#devis-gratuit .multi-step-wrapper {
+  border: 1px solid #e2e8f0;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
