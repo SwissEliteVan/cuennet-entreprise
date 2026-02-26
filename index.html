@@ -18,76 +18,24 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#devis">Devis</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="nettoyage.html">Nettoyage</a></li>
+            <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs par ville</a></li>
+            <li class="nav-item"><a class="nav-link" href="international.html">International</a></li>
             <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
-            <li class="nav-item"><a class="nav-link" href="entreprises.html">Entreprises</a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.html">Profil d'entreprise</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <section class="cta-banner py-3 text-center text-white">
-      <div class="container fw-semibold">
-        Comparez Devis Déménagement / Trouvez le déménageur pour votre projet / Gratuit - Aucune Obligation
-      </div>
-    </section>
   </header>
 
   <main>
-    <section class="py-5 bg-light" id="devis">
-      <div class="container">
-        <div class="row justify-content-center">
+    <section class="hero-home text-white py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
           <div class="col-lg-8">
-            <h1 class="mb-3">Calculateur de devis déménagement</h1>
-            <p class="text-muted">Obtenez rapidement une estimation basée sur la taille de votre logement, la distance et les services complémentaires.</p>
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label" for="size">Taille du logement</label>
-                    <select id="size" class="form-select">
-                      <option value="studio">Studio / 1-2 pièces (10–20 m³)</option>
-                      <option value="2-3">2-3 pièces (20–30 m³)</option>
-                      <option value="3-4">3-4 pièces (30–40 m³)</option>
-                      <option value="maison">Maison (40–60 m³ et +)</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="distance">Distance</label>
-                    <select id="distance" class="form-select">
-                      <option value="local">Local</option>
-                      <option value="longue">Longue distance 200km</option>
-                    </select>
-                  </div>
-                </div>
-
-                <hr>
-
-                <h2 class="h5">Options supplémentaires</h2>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="emballage" id="emballage">
-                  <label class="form-check-label" for="emballage">Matériel d'emballage (+100 à 250 CHF)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="demontage" id="demontage">
-                  <label class="form-check-label" for="demontage">Démontage et remontage (+200 à 450 CHF)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="monte" id="monte">
-                  <label class="form-check-label" for="monte">Location de monte-meuble (+500 CHF / demi-journée)</label>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="checkbox" value="nettoyage" id="nettoyage">
-                  <label class="form-check-label" for="nettoyage">Nettoyage (+200 à 400 CHF)</label>
-                </div>
-
-                <button class="btn btn-primary" id="calculateBtn">Calculer</button>
-                <p class="alert alert-info mt-3 mb-0" id="result">Prix estimé : 550 CHF - 1000 CHF</p>
-                <small class="text-muted d-block mt-2">Le prix final dépendra d'une visite sur place et des conditions d'accès.</small>
-              </div>
-            </div>
+            <h1 class="display-4 fw-bold mb-3">Déménagez en Suisse l'esprit serein</h1>
+            <p class="lead mb-4">Le prix moyen d'un déménagement tout compris varie entre 800 CHF et 1500 CHF. Comparez jusqu'à 5 devis gratuitement et sans engagement.</p>
+            <a class="btn btn-light btn-lg fw-semibold" href="tarifs.html">Calculer mon prix</a>
           </div>
         </div>
       </div>
@@ -95,45 +43,60 @@
 
     <section class="py-5" id="services">
       <div class="container">
-        <h2>Services principaux</h2>
-        <p>Découvrez nos services de déménagement, nettoyage, et conseils pratiques pour réussir votre projet partout en Suisse.</p>
+        <h2 class="mb-4">Nos Services</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm service-card">
+              <div class="card-body">
+                <h3 class="h5">Déménagement Local</h3>
+                <p class="mb-0 text-muted">Organisation complète pour les déménagements dans votre canton avec des équipes vérifiées.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm service-card">
+              <div class="card-body">
+                <h3 class="h5">Nettoyage de fin de bail</h3>
+                <p class="mb-0 text-muted">Prestations avec garantie de remise des clés pour rassurer les locataires et les régies.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm service-card">
+              <div class="card-body">
+                <h3 class="h5">Déménagement International</h3>
+                <p class="mb-0 text-muted">Accompagnement sur les formalités douanières et logistiques entre la Suisse et l'étranger.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reassurance-band py-4">
+      <div class="container">
+        <div class="row g-3 text-center">
+          <div class="col-md-4">
+            <div class="reassurance-item p-3 h-100 rounded-3">
+              <p class="icon mb-2">✅</p>
+              <p class="fw-semibold mb-0">Entreprises vérifiées sur Zefix</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="reassurance-item p-3 h-100 rounded-3">
+              <p class="icon mb-2">🧽</p>
+              <p class="fw-semibold mb-0">Garantie de remise des clés pour le nettoyage</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="reassurance-item p-3 h-100 rounded-3">
+              <p class="icon mb-2">💸</p>
+              <p class="fw-semibold mb-0">Économisez en comparant</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-
-  <footer class="footer py-5 text-white">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h3 class="h5">À propos</h3>
-          <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">À propos de nous</a></li>
-            <li><a href="#" class="footer-link">Ce que nous faisons</a></li>
-            <li><a href="#" class="footer-link">Mentions légales</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3 class="h5">Pour les sociétés</h3>
-          <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">Fonctionnement</a></li>
-            <li><a href="#" class="footer-link">Essai Gratuit</a></li>
-            <li><a href="#" class="footer-link">Se connecter</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3 class="h5">Besoin d'aide ?</h3>
-          <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">Contact</a></li>
-            <li><a href="#" class="footer-link">E-mail</a></li>
-            <li><a href="#" class="footer-link">Confidentialité</a></li>
-            <li><a href="#" class="footer-link">Cookies</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
