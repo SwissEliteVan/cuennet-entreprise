@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aide au Déménagement en Suisse : Guide Complet</title>
-  <meta name="description" content="Découvrez les principales aides financières au déménagement en Suisse : LaFam, ORP, Prosenectute et soutien de l'employeur." />
+  <title>Aides Financières au Déménagement | Suisse</title>
+  <meta name="description" content="Aides financières au déménagement en Suisse : employeurs, ORP, seniors et revenus modestes." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,58 +12,49 @@
   <main class="py-5">
     <article class="container info-page">
       <header class="mb-4">
-        <h1>Aide au Déménagement en Suisse : Guide Complet</h1>
-        <p class="lead mb-0">Tour d'horizon des aides existantes pour réduire le coût d'un déménagement en Suisse.</p>
+        <h1>Aides Financières au Déménagement</h1>
+        <p class="lead mb-0">Consultez les solutions d'accompagnement possibles en Suisse selon votre situation.</p>
       </header>
 
-      <section class="info-card mb-4">
-        <h2 class="h4 mb-3">Prime de l'AHV/AI (LaFam)</h2>
-        <p>Cette prime est destinée aux familles nombreuses et peut offrir un soutien financier utile lors d'un changement de logement.</p>
-        <div class="table-responsive">
-          <table class="table table-bordered align-middle mb-0">
-            <thead class="table-light">
-              <tr>
-                <th>Situation du foyer</th>
-                <th>Montant</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Foyer de 3 enfants</td>
-                <td>1000 CHF</td>
-              </tr>
-              <tr>
-                <td>Foyer de 4 enfants</td>
-                <td>1090 CHF</td>
-              </tr>
-              <tr>
-                <td>Plus de 4 enfants</td>
-                <td>+90 CHF par enfant supplémentaire</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-danger fw-semibold mt-3 mb-0">Important : la demande doit être déposée au moins 6 mois avant le déménagement.</p>
-      </section>
+      <section class="aid-accordion" aria-label="Liste des aides financières">
+        <article class="aid-item">
+          <button class="aid-trigger" type="button" aria-expanded="false" aria-controls="aid-employes" id="trigger-employes">
+            Employés
+          </button>
+          <div class="aid-panel" id="aid-employes" role="region" aria-labelledby="trigger-employes" hidden>
+            <p class="mb-0">En Suisse, il est d'usage que l'employeur octroie un jour de congé pour un déménagement.</p>
+          </div>
+        </article>
 
-      <section class="info-card mb-4">
-        <h2 class="h4 mb-2">Aide de l'ORP</h2>
-        <p class="mb-0">L'Office Régional de Placement peut accompagner les demandeurs d'emploi qui déménagent à l'étranger afin de faciliter leur retour à l'emploi.</p>
-      </section>
+        <article class="aid-item">
+          <button class="aid-trigger" type="button" aria-expanded="false" aria-controls="aid-orp" id="trigger-orp">
+            Demandeurs d'emploi (ORP)
+          </button>
+          <div class="aid-panel" id="aid-orp" role="region" aria-labelledby="trigger-orp" hidden>
+            <p class="mb-0">L'Office Régional de Placement (ORP) peut participer aux frais de déménagement pour les personnes devant s'installer à l'étranger pour trouver du travail.</p>
+          </div>
+        </article>
 
-      <section class="info-card mb-4">
-        <h2 class="h4 mb-2">Aide pour les retraités</h2>
-        <p class="mb-0">Les personnes en âge AVS peuvent solliciter une aide auprès de Prosenectute selon leur situation personnelle.</p>
-      </section>
+        <article class="aid-item">
+          <button class="aid-trigger" type="button" aria-expanded="false" aria-controls="aid-seniors" id="trigger-seniors">
+            Retraités et Seniors
+          </button>
+          <div class="aid-panel" id="aid-seniors" role="region" aria-labelledby="trigger-seniors" hidden>
+            <p class="mb-0">Les personnes en âge AVS peuvent solliciter une aide auprès d'organismes comme Prosenectute.</p>
+          </div>
+        </article>
 
-      <section class="info-card mb-4">
-        <h2 class="h4 mb-2">Aide de l'employeur</h2>
-        <p class="mb-0">En Suisse, un jour de congé est normalement octroyé pour un déménagement, ce qui permet d'organiser plus sereinement le jour J.</p>
+        <article class="aid-item">
+          <button class="aid-trigger" type="button" aria-expanded="false" aria-controls="aid-modestes" id="trigger-modestes">
+            Revenus modestes
+          </button>
+          <div class="aid-panel" id="aid-modestes" role="region" aria-labelledby="trigger-modestes" hidden>
+            <p class="mb-0">Les personnes à revenus très modestes peuvent parfois solliciter l'Assurance Invalidité (AI) pour obtenir de l'aide.</p>
+          </div>
+        </article>
       </section>
-
-      <section class="info-card" data-faq-component></section>
     </article>
   </main>
-  <script src="faq-component.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

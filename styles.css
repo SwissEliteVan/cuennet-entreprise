@@ -149,3 +149,58 @@ body {
   background: #2563eb;
   border-color: #2563eb;
 }
+
+.service-detail {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.customs-box {
+  background: #ecfeff;
+  border-left: 6px solid #0891b2;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.blog-article {
+  max-width: 920px;
+}
+
+.info-page {
+  max-width: 920px;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 0.9rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.aid-item {
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.aid-trigger {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: #f8fafc;
+  padding: 1rem 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.aid-trigger[aria-expanded="true"] {
+  background: #e0f2fe;
+}
+
+.aid-panel {
+  padding: 1rem 1.1rem;
+}
